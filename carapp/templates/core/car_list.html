@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block site_title %}Car List{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="car-header">
+                <h2 class="pull-left">Your Cars</h2>
+            </div>
+            <div class="car-list">
+                <ul class="cl-group">
+                    {% for c in cars %}
+                        <li>{{ c.make }} - {{ c.model }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
